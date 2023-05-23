@@ -1,0 +1,5 @@
+vpr_status=success
+vpr_seconds=3
+rundir=/home/endri-admin/Desktop/VTR_forks/vtr-verilog-to-routing_may2023/vtr_work/vtr_out_dir/my_multiplier_dir
+hostname=ece-a55024.austin.utexas.edu
+error=

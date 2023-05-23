@@ -47,7 +47,7 @@ option(VPR_ENABLE_INTERCHANGE "Enable FPGA interchange." ON)
 option(WITH_BLIFEXPLORER "Enable build with blifexplorer" OFF)
 
 option(WITH_ABC "Enable building abc" ON)
-option(WITH_ODIN "Enable building odin" OFF)
+option(WITH_ODIN "Enable building odin" ON)
 option(ODIN_DEBUG "Enable building odin with debug flags" OFF)
 option(ODIN_WARN "Enable building odin with extra warning flags" OFF)
 option(ODIN_COVERAGE "Enable building odin with coverage flags" OFF)

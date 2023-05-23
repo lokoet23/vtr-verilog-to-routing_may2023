@@ -20,7 +20,7 @@ puts "Using parmys as partial mapper"
 
 
 
-parmys_arch -a /home/endri-admin/Desktop/VTR_forks/vtr-verilog-to-routing_may2023/vtr_work/quickstart/blink_manual/EArch.xml
+parmys_arch -a /home/endri-admin/Desktop/VTR_forks/vtr-verilog-to-routing_may2023/vtr_work/quickstart/blink_run_flow/EArch.xml
 
 
 
@@ -126,7 +126,7 @@ opt -full
 
 
 
-parmys -a /home/endri-admin/Desktop/VTR_forks/vtr-verilog-to-routing_may2023/vtr_work/quickstart/blink_manual/EArch.xml -nopass -c odin_config.xml
+parmys -a /home/endri-admin/Desktop/VTR_forks/vtr-verilog-to-routing_may2023/vtr_work/quickstart/blink_run_flow/EArch.xml -nopass -c odin_config.xml
 
 
 

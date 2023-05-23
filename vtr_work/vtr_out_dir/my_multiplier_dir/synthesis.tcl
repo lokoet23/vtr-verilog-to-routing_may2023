@@ -20,7 +20,7 @@ puts "Using parmys as partial mapper"
 
 
 
-parmys_arch -a /home/endri-admin/Desktop/VTR_forks/vtr-verilog-to-routing_may2023/vtr_work/quickstart/blink_manual/EArch.xml
+parmys_arch -a /home/endri-admin/Desktop/VTR_forks/vtr-verilog-to-routing_may2023/vtr_work/vtr_out_dir/my_multiplier_dir/k6FracN10LB_mem20K_complexDSP_customSB_22nm.xml
 
 
 
@@ -32,7 +32,7 @@ if {$env(PARSER) == "surelog" } {
 
 	yosys -import
 
-	read_uhdm -debug blink.v
+	read_uhdm -debug my_multiplier.v
 
 } elseif {$env(PARSER) == "system-verilog" } {
 
@@ -42,13 +42,13 @@ if {$env(PARSER) == "surelog" } {
 
 	yosys -import
 
-	read_systemverilog -debug blink.v
+	read_systemverilog -debug my_multiplier.v
 
 } elseif {$env(PARSER) == "default" } {
 
 	puts "Using Yosys read_verilog command"
 
-	read_verilog -sv -nolatches blink.v
+	read_verilog -sv -nolatches my_multiplier.v
 
 } else {
 
@@ -126,7 +126,7 @@ opt -full
 
 
 
-parmys -a /home/endri-admin/Desktop/VTR_forks/vtr-verilog-to-routing_may2023/vtr_work/quickstart/blink_manual/EArch.xml -nopass -c odin_config.xml
+parmys -a /home/endri-admin/Desktop/VTR_forks/vtr-verilog-to-routing_may2023/vtr_work/vtr_out_dir/my_multiplier_dir/k6FracN10LB_mem20K_complexDSP_customSB_22nm.xml -nopass -c odin_config.xml
 
 
 
@@ -158,5 +158,5 @@ hierarchy -check -auto-top -purge_lib
 
 
 
-write_blif -true + vcc -false + gnd -undef + unconn -blackbox blink.parmys.blif
+write_blif -true + vcc -false + gnd -undef + unconn -blackbox my_multiplier.parmys.blif
 
