@@ -230,6 +230,7 @@
     </model>
     <model name="hard_model">
       <input_ports>
+        <port name="reset" combinational_sink_ports="out"/>
         <port name="a" combinational_sink_ports="out"/>
         <port name="b" combinational_sink_ports="out"/>
         <port name="clk" is_clock="1"/>
@@ -684,11 +685,14 @@
         <equivalent_sites>
           <site pb_type="d_hard_top" pin_mapping="direct"/>
         </equivalent_sites>
+        <input name="reset" num_pins="1" is_non_clock_global="true"/>
         <input name="I_upper" num_pins="36"/>
         <input name="I_lower" num_pins="36"/>
         <output name="out" num_pins="72"/>
         <clock name="clk" num_pins="1"/>
-        <fc in_type="frac" in_val="0.15" out_type="frac" out_val="0.10"/>
+        <fc in_type="frac" in_val="0.15" out_type="frac" out_val="0.10">
+          <fc_override fc_type="frac" fc_val="0" port_name="clk"/>
+        </fc>  
         <pinlocations pattern="spread"/>
       </sub_tile>
     </tile>
@@ -718,16 +722,19 @@
       <perimeter type="io" priority="101"/>
       <corners type="EMPTY" priority="102"/>
       <fill type="clb" priority="10"/>
-      <col type="dsp_top" startx="21" starty="1" repeatx="32" priority="20"/>
+      <!-- <col type="dsp_top" startx="21" starty="1" repeatx="32" priority="20"/>
       <col type="dsp_top" startx="22" starty="1" repeatx="32" priority="20"/>
       <col type="dsp_top" startx="23" starty="1" repeatx="32" priority="20"/>
       <col type="dsp_top" startx="24" starty="1" repeatx="32" priority="20"/>
       <col type="memory" startx="5" starty="1" repeatx="32" priority="20"/>
       <col type="memory" startx="6" starty="1" repeatx="32" priority="20"/>
       <col type="memory" startx="7" starty="1" repeatx="32" priority="20"/>
-      <col type="memory" startx="8" starty="1" repeatx="32" priority="20"/>
+      <col type="memory" startx="8" starty="1" repeatx="32" priority="20"/> -->
 
-      <col type="d_hard_top" startx="10" starty="1" repeatx="32" priority="20"/>
+      <col type="dsp_top" startx="6" starty="1" repeatx="16" priority="20"/>
+      <col type="memory" startx="2" starty="1" repeatx="16" priority="20"/>
+
+      <col type="d_hard_top" startx="4" starty="1" repeatx="16" priority="20"/>
     </auto_layout>
     <!--
     <fixed_layout name="mylayout" width="178" height="82">
@@ -1221,6 +1228,7 @@
 
     <!-- Define d_hard_top begin -->
     <pb_type name="d_hard_top">
+      <input name="reset" num_pins="1" is_non_clock_global="true"/>
       <input name="I_upper" num_pins="36"/>
       <input name="I_lower" num_pins="36"/>
       <output name="out" num_pins="72"/>
@@ -1229,21 +1237,27 @@
       
       <mode name="d_hard_mode">
         <pb_type name="d_hard_slice" num_pb="1">
+          <input name="reset" num_pins="1"/>
           <input name="A_cfg" num_pins="36"/>
           <input name="B_cfg" num_pins="36"/>
           <output name="OUT_cfg" num_pins="72"/>
           <clock name="clk" num_pins="1"/>
           <pb_type name="d_hard" blif_model=".subckt hard_model" num_pb="1">
+            <input name="reset" num_pins="1"/>
             <input name="a" num_pins="36"/>
             <input name="b" num_pins="36"/>
             <output name="out" num_pins="72"/>
             <clock name="clk" num_pins="1"/>
+
+            <delay_constant max="1.523e-9" in_port="d_hard.reset" out_port="d_hard.out"/>
             <delay_constant max="1.523e-9" in_port="d_hard.a" out_port="d_hard.out"/>
             <delay_constant max="1.523e-9" in_port="d_hard.b" out_port="d_hard.out"/>
-            <T_setup value="66e-12" port="d_hard.out" clock="clk"/>
-            <T_clock_to_Q max="124e-12" port="d_hard.out" clock="clk"/>
+            <T_setup value="18.91e-12" port="d_hard.out" clock="clk"/>
+            <T_clock_to_Q max="60.32e-12" port="d_hard.out" clock="clk"/>
           </pb_type>
           <interconnect>
+            <direct name="reset2reset" input="d_hard_slice.reset" output="d_hard.reset">
+            </direct>
             <direct name="a2a" input="d_hard_slice.A_cfg" output="d_hard.a">
             </direct>
             <direct name="b2b" input="d_hard_slice.B_cfg" output="d_hard.b">
@@ -1267,8 +1281,9 @@
 
           <direct name="out2out" input="d_hard_slice.OUT_cfg" output="d_hard_top.out">
           </direct>
-
           <direct name="clk2clktop" input="d_hard_top.clk" output="d_hard_slice.clk">
+          </direct>
+          <direct name="reset2resettop" input="d_hard_top.reset" output="d_hard_slice.reset">
           </direct>
         </interconnect>
       </mode>

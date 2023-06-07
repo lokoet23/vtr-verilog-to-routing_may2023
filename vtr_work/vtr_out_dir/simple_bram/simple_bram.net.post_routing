@@ -1,0 +1,1298 @@
+<?xml version="1.0"?>
+<block name="/home/endri-admin/Desktop/VTR_forks/vtr-verilog-to-routing_may2023/vtr_work/vtr_out_dir/simple_bram/simple_bram.net.post_routing" instance="FPGA_packed_netlist[0]" architecture_id="SHA256:c7efb844d3da2e295a8ffeade80daf2f452af88873f34dfcc3030925a0fad197" atom_netlist_id="SHA256:0eb4c81f25955d4d57aed1e3a8d980bed9dce843e65f137307d06a1b3ffbdd00">
+	<inputs>bram_data2~5 bram_data2~6 bram_addr1~0 bram_data2~7 bram_data2~8 bram_data1~6 bram_data1~7 bram_data1~9 bram_data1~3 bram_data2~4 bram_data1~5 bram_data1~4 bram_data2~3 bram_data2~2 bram_data2~1 bram_data2~0 bram_addr2~0 bram_addr2~1 bram_addr2~2 bram_addr2~3 bram_data1~1 bram_data1~2 bram_addr2~4 bram_data1~0 bram_addr1~1 bram_addr1~3 bram_we1 bram_we2 clk bram_addr1~2 bram_addr1~4 bram_data1~8 bram_data2~9</inputs>
+	<outputs>out:bram_out2~8 out:bram_out2~7 out:bram_out2~9 out:bram_out1~5 out:bram_out1~7 out:bram_out1~4 out:bram_out1~8 out:bram_out2~2 out:bram_out2~0 out:bram_out2~1 out:bram_out1~2 out:bram_out1~6 out:bram_out1~1 out:bram_out2~6 out:bram_out1~9 out:bram_out1~3 out:bram_out1~0 out:bram_out2~5 out:bram_out2~4 out:bram_out2~3</outputs>
+	<clocks>clk</clocks>
+	<block name="dual_port_ram^MEM~0-0^out2~1" instance="memory[0]" mode="mem_1024x20_dp">
+		<inputs>
+			<port name="addr1">bram_addr1~0 bram_addr1~1 bram_addr1~2 bram_addr1~3 bram_addr1~4 open open open open open open</port>
+			<port name="addr2">bram_addr2~0 bram_addr2~1 bram_addr2~2 bram_addr2~3 bram_addr2~4 open open open open open open</port>
+			<port name="data">open open open open open bram_data1~1 bram_data1~4 bram_data1~5 bram_data1~6 bram_data1~7 bram_data1~8 bram_data1~9 bram_data1~0 open open open open open bram_data1~2 bram_data1~3 open open open open open bram_data2~1 bram_data2~4 bram_data2~5 bram_data2~6 bram_data2~7 bram_data2~8 bram_data2~9 bram_data2~0 open open open open open bram_data2~2 bram_data2~3</port>
+			<port name="we1">bram_we1</port>
+			<port name="we2">bram_we2</port>
+		</inputs>
+		<outputs>
+			<port name="out">open open open open open mem_1024x20_dp[0].out1[5]-&gt;dataout1 mem_1024x20_dp[0].out1[6]-&gt;dataout1 mem_1024x20_dp[0].out1[7]-&gt;dataout1 mem_1024x20_dp[0].out1[8]-&gt;dataout1 mem_1024x20_dp[0].out1[9]-&gt;dataout1 mem_1024x20_dp[0].out1[10]-&gt;dataout1 mem_1024x20_dp[0].out1[11]-&gt;dataout1 mem_1024x20_dp[0].out1[12]-&gt;dataout1 open open open open open mem_1024x20_dp[0].out1[18]-&gt;dataout1 mem_1024x20_dp[0].out1[19]-&gt;dataout1 open open open open open mem_1024x20_dp[0].out2[5]-&gt;dataout2 mem_1024x20_dp[0].out2[6]-&gt;dataout2 mem_1024x20_dp[0].out2[7]-&gt;dataout2 mem_1024x20_dp[0].out2[8]-&gt;dataout2 mem_1024x20_dp[0].out2[9]-&gt;dataout2 mem_1024x20_dp[0].out2[10]-&gt;dataout2 mem_1024x20_dp[0].out2[11]-&gt;dataout2 mem_1024x20_dp[0].out2[12]-&gt;dataout2 open open open open open mem_1024x20_dp[0].out2[18]-&gt;dataout2 mem_1024x20_dp[0].out2[19]-&gt;dataout2</port>
+		</outputs>
+		<clocks>
+			<port name="clk">clk</port>
+		</clocks>
+		<block name="dual_port_ram^MEM~0-0^out2~1" instance="mem_1024x20_dp[0]" mode="memory_slice">
+			<inputs>
+				<port name="addr1">memory.addr1[0]-&gt;address1 memory.addr1[1]-&gt;address1 memory.addr1[2]-&gt;address1 memory.addr1[3]-&gt;address1 memory.addr1[4]-&gt;address1 open open open open open</port>
+				<port name="addr2">memory.addr2[0]-&gt;address2 memory.addr2[1]-&gt;address2 memory.addr2[2]-&gt;address2 memory.addr2[3]-&gt;address2 memory.addr2[4]-&gt;address2 open open open open open</port>
+				<port name="data1">open open open open open memory.data[5]-&gt;data1 memory.data[6]-&gt;data1 memory.data[7]-&gt;data1 memory.data[8]-&gt;data1 memory.data[9]-&gt;data1 memory.data[10]-&gt;data1 memory.data[11]-&gt;data1 memory.data[12]-&gt;data1 open open open open open memory.data[18]-&gt;data1 memory.data[19]-&gt;data1</port>
+				<port name="data2">open open open open open memory.data[25]-&gt;data2 memory.data[26]-&gt;data2 memory.data[27]-&gt;data2 memory.data[28]-&gt;data2 memory.data[29]-&gt;data2 memory.data[30]-&gt;data2 memory.data[31]-&gt;data2 memory.data[32]-&gt;data2 open open open open open memory.data[38]-&gt;data2 memory.data[39]-&gt;data2</port>
+				<port name="we1">memory.we1[0]-&gt;writeen1</port>
+				<port name="we2">memory.we2[0]-&gt;writeen2</port>
+			</inputs>
+			<outputs>
+				<port name="out1">open open open open open memory_slice[5].out1[0]-&gt;direct82 memory_slice[6].out1[0]-&gt;direct82 memory_slice[7].out1[0]-&gt;direct82 memory_slice[8].out1[0]-&gt;direct82 memory_slice[9].out1[0]-&gt;direct82 memory_slice[10].out1[0]-&gt;direct82 memory_slice[11].out1[0]-&gt;direct82 memory_slice[12].out1[0]-&gt;direct82 open open open open open memory_slice[18].out1[0]-&gt;direct82 memory_slice[19].out1[0]-&gt;direct82</port>
+				<port name="out2">open open open open open memory_slice[5].out2[0]-&gt;direct83 memory_slice[6].out2[0]-&gt;direct83 memory_slice[7].out2[0]-&gt;direct83 memory_slice[8].out2[0]-&gt;direct83 memory_slice[9].out2[0]-&gt;direct83 memory_slice[10].out2[0]-&gt;direct83 memory_slice[11].out2[0]-&gt;direct83 memory_slice[12].out2[0]-&gt;direct83 open open open open open memory_slice[18].out2[0]-&gt;direct83 memory_slice[19].out2[0]-&gt;direct83</port>
+			</outputs>
+			<clocks>
+				<port name="clk">memory.clk[0]-&gt;clk</port>
+			</clocks>
+			<block name="open" instance="memory_slice[0]" />
+			<block name="open" instance="memory_slice[1]" />
+			<block name="open" instance="memory_slice[2]" />
+			<block name="open" instance="memory_slice[3]" />
+			<block name="open" instance="memory_slice[4]" />
+			<block name="dual_port_ram^MEM~0-1^out2~1" instance="memory_slice[5]">
+				<attributes />
+				<parameters />
+				<inputs>
+					<port name="addr1">mem_1024x20_dp.addr1[0]-&gt;direct5_5 mem_1024x20_dp.addr1[1]-&gt;direct5_5 mem_1024x20_dp.addr1[2]-&gt;direct5_5 mem_1024x20_dp.addr1[3]-&gt;direct5_5 mem_1024x20_dp.addr1[4]-&gt;direct5_5 open open open open open</port>
+					<port name="addr2">mem_1024x20_dp.addr2[0]-&gt;direct25_5 mem_1024x20_dp.addr2[1]-&gt;direct25_5 mem_1024x20_dp.addr2[2]-&gt;direct25_5 mem_1024x20_dp.addr2[3]-&gt;direct25_5 mem_1024x20_dp.addr2[4]-&gt;direct25_5 open open open open open</port>
+					<port name="data1">mem_1024x20_dp.data1[5]-&gt;direct40</port>
+					<port name="data2">mem_1024x20_dp.data2[5]-&gt;direct41</port>
+					<port name="we1">mem_1024x20_dp.we1[0]-&gt;direct47_5</port>
+					<port name="we2">mem_1024x20_dp.we2[0]-&gt;direct67_5</port>
+				</inputs>
+				<outputs>
+					<port name="out1">bram_out1~1</port>
+					<port name="out2">bram_out2~1</port>
+				</outputs>
+				<clocks>
+					<port name="clk">mem_1024x20_dp.clk[0]-&gt;direct89_5</port>
+				</clocks>
+			</block>
+			<block name="dual_port_ram^MEM~0-4^out2~1" instance="memory_slice[6]">
+				<attributes />
+				<parameters />
+				<inputs>
+					<port name="addr1">mem_1024x20_dp.addr1[0]-&gt;direct6_6 mem_1024x20_dp.addr1[1]-&gt;direct6_6 mem_1024x20_dp.addr1[2]-&gt;direct6_6 mem_1024x20_dp.addr1[3]-&gt;direct6_6 mem_1024x20_dp.addr1[4]-&gt;direct6_6 open open open open open</port>
+					<port name="addr2">mem_1024x20_dp.addr2[0]-&gt;direct26_6 mem_1024x20_dp.addr2[1]-&gt;direct26_6 mem_1024x20_dp.addr2[2]-&gt;direct26_6 mem_1024x20_dp.addr2[3]-&gt;direct26_6 mem_1024x20_dp.addr2[4]-&gt;direct26_6 open open open open open</port>
+					<port name="data1">mem_1024x20_dp.data1[6]-&gt;direct40</port>
+					<port name="data2">mem_1024x20_dp.data2[6]-&gt;direct41</port>
+					<port name="we1">mem_1024x20_dp.we1[0]-&gt;direct48_6</port>
+					<port name="we2">mem_1024x20_dp.we2[0]-&gt;direct68_6</port>
+				</inputs>
+				<outputs>
+					<port name="out1">bram_out1~4</port>
+					<port name="out2">bram_out2~4</port>
+				</outputs>
+				<clocks>
+					<port name="clk">mem_1024x20_dp.clk[0]-&gt;direct90_6</port>
+				</clocks>
+			</block>
+			<block name="dual_port_ram^MEM~0-5^out2~1" instance="memory_slice[7]">
+				<attributes />
+				<parameters />
+				<inputs>
+					<port name="addr1">mem_1024x20_dp.addr1[0]-&gt;direct7_7 mem_1024x20_dp.addr1[1]-&gt;direct7_7 mem_1024x20_dp.addr1[2]-&gt;direct7_7 mem_1024x20_dp.addr1[3]-&gt;direct7_7 mem_1024x20_dp.addr1[4]-&gt;direct7_7 open open open open open</port>
+					<port name="addr2">mem_1024x20_dp.addr2[0]-&gt;direct27_7 mem_1024x20_dp.addr2[1]-&gt;direct27_7 mem_1024x20_dp.addr2[2]-&gt;direct27_7 mem_1024x20_dp.addr2[3]-&gt;direct27_7 mem_1024x20_dp.addr2[4]-&gt;direct27_7 open open open open open</port>
+					<port name="data1">mem_1024x20_dp.data1[7]-&gt;direct40</port>
+					<port name="data2">mem_1024x20_dp.data2[7]-&gt;direct41</port>
+					<port name="we1">mem_1024x20_dp.we1[0]-&gt;direct49_7</port>
+					<port name="we2">mem_1024x20_dp.we2[0]-&gt;direct69_7</port>
+				</inputs>
+				<outputs>
+					<port name="out1">bram_out1~5</port>
+					<port name="out2">bram_out2~5</port>
+				</outputs>
+				<clocks>
+					<port name="clk">mem_1024x20_dp.clk[0]-&gt;direct91_7</port>
+				</clocks>
+			</block>
+			<block name="dual_port_ram^MEM~0-6^out2~1" instance="memory_slice[8]">
+				<attributes />
+				<parameters />
+				<inputs>
+					<port name="addr1">mem_1024x20_dp.addr1[0]-&gt;direct8_8 mem_1024x20_dp.addr1[1]-&gt;direct8_8 mem_1024x20_dp.addr1[2]-&gt;direct8_8 mem_1024x20_dp.addr1[3]-&gt;direct8_8 mem_1024x20_dp.addr1[4]-&gt;direct8_8 open open open open open</port>
+					<port name="addr2">mem_1024x20_dp.addr2[0]-&gt;direct28_8 mem_1024x20_dp.addr2[1]-&gt;direct28_8 mem_1024x20_dp.addr2[2]-&gt;direct28_8 mem_1024x20_dp.addr2[3]-&gt;direct28_8 mem_1024x20_dp.addr2[4]-&gt;direct28_8 open open open open open</port>
+					<port name="data1">mem_1024x20_dp.data1[8]-&gt;direct40</port>
+					<port name="data2">mem_1024x20_dp.data2[8]-&gt;direct41</port>
+					<port name="we1">mem_1024x20_dp.we1[0]-&gt;direct50_8</port>
+					<port name="we2">mem_1024x20_dp.we2[0]-&gt;direct70_8</port>
+				</inputs>
+				<outputs>
+					<port name="out1">bram_out1~6</port>
+					<port name="out2">bram_out2~6</port>
+				</outputs>
+				<clocks>
+					<port name="clk">mem_1024x20_dp.clk[0]-&gt;direct92_8</port>
+				</clocks>
+			</block>
+			<block name="dual_port_ram^MEM~0-7^out2~1" instance="memory_slice[9]">
+				<attributes />
+				<parameters />
+				<inputs>
+					<port name="addr1">mem_1024x20_dp.addr1[0]-&gt;direct9_9 mem_1024x20_dp.addr1[1]-&gt;direct9_9 mem_1024x20_dp.addr1[2]-&gt;direct9_9 mem_1024x20_dp.addr1[3]-&gt;direct9_9 mem_1024x20_dp.addr1[4]-&gt;direct9_9 open open open open open</port>
+					<port name="addr2">mem_1024x20_dp.addr2[0]-&gt;direct29_9 mem_1024x20_dp.addr2[1]-&gt;direct29_9 mem_1024x20_dp.addr2[2]-&gt;direct29_9 mem_1024x20_dp.addr2[3]-&gt;direct29_9 mem_1024x20_dp.addr2[4]-&gt;direct29_9 open open open open open</port>
+					<port name="data1">mem_1024x20_dp.data1[9]-&gt;direct40</port>
+					<port name="data2">mem_1024x20_dp.data2[9]-&gt;direct41</port>
+					<port name="we1">mem_1024x20_dp.we1[0]-&gt;direct51_9</port>
+					<port name="we2">mem_1024x20_dp.we2[0]-&gt;direct71_9</port>
+				</inputs>
+				<outputs>
+					<port name="out1">bram_out1~7</port>
+					<port name="out2">bram_out2~7</port>
+				</outputs>
+				<clocks>
+					<port name="clk">mem_1024x20_dp.clk[0]-&gt;direct93_9</port>
+				</clocks>
+			</block>
+			<block name="dual_port_ram^MEM~0-8^out2~1" instance="memory_slice[10]">
+				<attributes />
+				<parameters />
+				<inputs>
+					<port name="addr1">mem_1024x20_dp.addr1[0]-&gt;direct10_10 mem_1024x20_dp.addr1[1]-&gt;direct10_10 mem_1024x20_dp.addr1[2]-&gt;direct10_10 mem_1024x20_dp.addr1[3]-&gt;direct10_10 mem_1024x20_dp.addr1[4]-&gt;direct10_10 open open open open open</port>
+					<port name="addr2">mem_1024x20_dp.addr2[0]-&gt;direct30_10 mem_1024x20_dp.addr2[1]-&gt;direct30_10 mem_1024x20_dp.addr2[2]-&gt;direct30_10 mem_1024x20_dp.addr2[3]-&gt;direct30_10 mem_1024x20_dp.addr2[4]-&gt;direct30_10 open open open open open</port>
+					<port name="data1">mem_1024x20_dp.data1[10]-&gt;direct40</port>
+					<port name="data2">mem_1024x20_dp.data2[10]-&gt;direct41</port>
+					<port name="we1">mem_1024x20_dp.we1[0]-&gt;direct52_10</port>
+					<port name="we2">mem_1024x20_dp.we2[0]-&gt;direct72_10</port>
+				</inputs>
+				<outputs>
+					<port name="out1">bram_out1~8</port>
+					<port name="out2">bram_out2~8</port>
+				</outputs>
+				<clocks>
+					<port name="clk">mem_1024x20_dp.clk[0]-&gt;direct94_10</port>
+				</clocks>
+			</block>
+			<block name="dual_port_ram^MEM~0-9^out2~1" instance="memory_slice[11]">
+				<attributes />
+				<parameters />
+				<inputs>
+					<port name="addr1">mem_1024x20_dp.addr1[0]-&gt;direct11_11 mem_1024x20_dp.addr1[1]-&gt;direct11_11 mem_1024x20_dp.addr1[2]-&gt;direct11_11 mem_1024x20_dp.addr1[3]-&gt;direct11_11 mem_1024x20_dp.addr1[4]-&gt;direct11_11 open open open open open</port>
+					<port name="addr2">mem_1024x20_dp.addr2[0]-&gt;direct31_11 mem_1024x20_dp.addr2[1]-&gt;direct31_11 mem_1024x20_dp.addr2[2]-&gt;direct31_11 mem_1024x20_dp.addr2[3]-&gt;direct31_11 mem_1024x20_dp.addr2[4]-&gt;direct31_11 open open open open open</port>
+					<port name="data1">mem_1024x20_dp.data1[11]-&gt;direct40</port>
+					<port name="data2">mem_1024x20_dp.data2[11]-&gt;direct41</port>
+					<port name="we1">mem_1024x20_dp.we1[0]-&gt;direct53_11</port>
+					<port name="we2">mem_1024x20_dp.we2[0]-&gt;direct73_11</port>
+				</inputs>
+				<outputs>
+					<port name="out1">bram_out1~9</port>
+					<port name="out2">bram_out2~9</port>
+				</outputs>
+				<clocks>
+					<port name="clk">mem_1024x20_dp.clk[0]-&gt;direct95_11</port>
+				</clocks>
+			</block>
+			<block name="dual_port_ram^MEM~0-0^out2~1" instance="memory_slice[12]">
+				<attributes />
+				<parameters />
+				<inputs>
+					<port name="addr1">mem_1024x20_dp.addr1[0]-&gt;direct12_12 mem_1024x20_dp.addr1[1]-&gt;direct12_12 mem_1024x20_dp.addr1[2]-&gt;direct12_12 mem_1024x20_dp.addr1[3]-&gt;direct12_12 mem_1024x20_dp.addr1[4]-&gt;direct12_12 open open open open open</port>
+					<port name="addr2">mem_1024x20_dp.addr2[0]-&gt;direct32_12 mem_1024x20_dp.addr2[1]-&gt;direct32_12 mem_1024x20_dp.addr2[2]-&gt;direct32_12 mem_1024x20_dp.addr2[3]-&gt;direct32_12 mem_1024x20_dp.addr2[4]-&gt;direct32_12 open open open open open</port>
+					<port name="data1">mem_1024x20_dp.data1[12]-&gt;direct40</port>
+					<port name="data2">mem_1024x20_dp.data2[12]-&gt;direct41</port>
+					<port name="we1">mem_1024x20_dp.we1[0]-&gt;direct54_12</port>
+					<port name="we2">mem_1024x20_dp.we2[0]-&gt;direct74_12</port>
+				</inputs>
+				<outputs>
+					<port name="out1">bram_out1~0</port>
+					<port name="out2">bram_out2~0</port>
+				</outputs>
+				<clocks>
+					<port name="clk">mem_1024x20_dp.clk[0]-&gt;direct96_12</port>
+				</clocks>
+			</block>
+			<block name="open" instance="memory_slice[13]" />
+			<block name="open" instance="memory_slice[14]" />
+			<block name="open" instance="memory_slice[15]" />
+			<block name="open" instance="memory_slice[16]" />
+			<block name="open" instance="memory_slice[17]" />
+			<block name="dual_port_ram^MEM~0-2^out2~1" instance="memory_slice[18]">
+				<attributes />
+				<parameters />
+				<inputs>
+					<port name="addr1">mem_1024x20_dp.addr1[0]-&gt;direct18_18 mem_1024x20_dp.addr1[1]-&gt;direct18_18 mem_1024x20_dp.addr1[2]-&gt;direct18_18 mem_1024x20_dp.addr1[3]-&gt;direct18_18 mem_1024x20_dp.addr1[4]-&gt;direct18_18 open open open open open</port>
+					<port name="addr2">mem_1024x20_dp.addr2[0]-&gt;direct38_18 mem_1024x20_dp.addr2[1]-&gt;direct38_18 mem_1024x20_dp.addr2[2]-&gt;direct38_18 mem_1024x20_dp.addr2[3]-&gt;direct38_18 mem_1024x20_dp.addr2[4]-&gt;direct38_18 open open open open open</port>
+					<port name="data1">mem_1024x20_dp.data1[18]-&gt;direct40</port>
+					<port name="data2">mem_1024x20_dp.data2[18]-&gt;direct41</port>
+					<port name="we1">mem_1024x20_dp.we1[0]-&gt;direct60_18</port>
+					<port name="we2">mem_1024x20_dp.we2[0]-&gt;direct80_18</port>
+				</inputs>
+				<outputs>
+					<port name="out1">bram_out1~2</port>
+					<port name="out2">bram_out2~2</port>
+				</outputs>
+				<clocks>
+					<port name="clk">mem_1024x20_dp.clk[0]-&gt;direct102_18</port>
+				</clocks>
+			</block>
+			<block name="dual_port_ram^MEM~0-3^out2~1" instance="memory_slice[19]">
+				<attributes />
+				<parameters />
+				<inputs>
+					<port name="addr1">mem_1024x20_dp.addr1[0]-&gt;direct19_19 mem_1024x20_dp.addr1[1]-&gt;direct19_19 mem_1024x20_dp.addr1[2]-&gt;direct19_19 mem_1024x20_dp.addr1[3]-&gt;direct19_19 mem_1024x20_dp.addr1[4]-&gt;direct19_19 open open open open open</port>
+					<port name="addr2">mem_1024x20_dp.addr2[0]-&gt;direct39_19 mem_1024x20_dp.addr2[1]-&gt;direct39_19 mem_1024x20_dp.addr2[2]-&gt;direct39_19 mem_1024x20_dp.addr2[3]-&gt;direct39_19 mem_1024x20_dp.addr2[4]-&gt;direct39_19 open open open open open</port>
+					<port name="data1">mem_1024x20_dp.data1[19]-&gt;direct40</port>
+					<port name="data2">mem_1024x20_dp.data2[19]-&gt;direct41</port>
+					<port name="we1">mem_1024x20_dp.we1[0]-&gt;direct61_19</port>
+					<port name="we2">mem_1024x20_dp.we2[0]-&gt;direct81_19</port>
+				</inputs>
+				<outputs>
+					<port name="out1">bram_out1~3</port>
+					<port name="out2">bram_out2~3</port>
+				</outputs>
+				<clocks>
+					<port name="clk">mem_1024x20_dp.clk[0]-&gt;direct103_19</port>
+				</clocks>
+			</block>
+		</block>
+	</block>
+	<block name="out:bram_out2~8" instance="io[1]" mode="outpad">
+		<inputs>
+			<port name="outpad">bram_out2~8</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="out:bram_out2~8" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="out:bram_out2~7" instance="io[2]" mode="outpad">
+		<inputs>
+			<port name="outpad">bram_out2~7</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="out:bram_out2~7" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="out:bram_out2~9" instance="io[3]" mode="outpad">
+		<inputs>
+			<port name="outpad">bram_out2~9</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="out:bram_out2~9" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="out:bram_out1~5" instance="io[4]" mode="outpad">
+		<inputs>
+			<port name="outpad">bram_out1~5</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="out:bram_out1~5" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="out:bram_out1~7" instance="io[5]" mode="outpad">
+		<inputs>
+			<port name="outpad">bram_out1~7</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="out:bram_out1~7" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="out:bram_out1~4" instance="io[6]" mode="outpad">
+		<inputs>
+			<port name="outpad">bram_out1~4</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="out:bram_out1~4" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="out:bram_out1~8" instance="io[7]" mode="outpad">
+		<inputs>
+			<port name="outpad">bram_out1~8</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="out:bram_out1~8" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="out:bram_out2~2" instance="io[8]" mode="outpad">
+		<inputs>
+			<port name="outpad">bram_out2~2</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="out:bram_out2~2" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="out:bram_out2~0" instance="io[9]" mode="outpad">
+		<inputs>
+			<port name="outpad">bram_out2~0</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="out:bram_out2~0" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="out:bram_out2~1" instance="io[10]" mode="outpad">
+		<inputs>
+			<port name="outpad">bram_out2~1</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="out:bram_out2~1" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="out:bram_out1~2" instance="io[11]" mode="outpad">
+		<inputs>
+			<port name="outpad">bram_out1~2</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="out:bram_out1~2" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="out:bram_out1~6" instance="io[12]" mode="outpad">
+		<inputs>
+			<port name="outpad">bram_out1~6</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="out:bram_out1~6" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="out:bram_out1~1" instance="io[13]" mode="outpad">
+		<inputs>
+			<port name="outpad">bram_out1~1</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="out:bram_out1~1" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="out:bram_out2~6" instance="io[14]" mode="outpad">
+		<inputs>
+			<port name="outpad">bram_out2~6</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="out:bram_out2~6" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="out:bram_out1~9" instance="io[15]" mode="outpad">
+		<inputs>
+			<port name="outpad">bram_out1~9</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="out:bram_out1~9" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="out:bram_out1~3" instance="io[16]" mode="outpad">
+		<inputs>
+			<port name="outpad">bram_out1~3</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="out:bram_out1~3" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="out:bram_out1~0" instance="io[17]" mode="outpad">
+		<inputs>
+			<port name="outpad">bram_out1~0</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="out:bram_out1~0" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="out:bram_out2~5" instance="io[18]" mode="outpad">
+		<inputs>
+			<port name="outpad">bram_out2~5</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="out:bram_out2~5" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="out:bram_out2~4" instance="io[19]" mode="outpad">
+		<inputs>
+			<port name="outpad">bram_out2~4</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="out:bram_out2~4" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="out:bram_out2~3" instance="io[20]" mode="outpad">
+		<inputs>
+			<port name="outpad">bram_out2~3</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="out:bram_out2~3" instance="outpad[0]">
+			<attributes />
+			<parameters />
+			<inputs>
+				<port name="outpad">io.outpad[0]-&gt;outpad</port>
+			</inputs>
+			<outputs />
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_data2~5" instance="io[21]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_data2~5" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_data2~5</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_data2~6" instance="io[22]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_data2~6" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_data2~6</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_addr1~0" instance="io[23]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_addr1~0" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_addr1~0</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_data2~7" instance="io[24]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_data2~7" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_data2~7</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_data2~8" instance="io[25]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_data2~8" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_data2~8</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_data1~6" instance="io[26]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_data1~6" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_data1~6</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_data1~7" instance="io[27]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_data1~7" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_data1~7</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_data1~9" instance="io[28]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_data1~9" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_data1~9</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_data1~3" instance="io[29]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_data1~3" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_data1~3</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_data2~4" instance="io[30]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_data2~4" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_data2~4</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_data1~5" instance="io[31]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_data1~5" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_data1~5</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_data1~4" instance="io[32]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_data1~4" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_data1~4</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_data2~3" instance="io[33]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_data2~3" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_data2~3</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_data2~2" instance="io[34]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_data2~2" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_data2~2</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_data2~1" instance="io[35]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_data2~1" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_data2~1</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_data2~0" instance="io[36]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_data2~0" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_data2~0</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_addr2~0" instance="io[37]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_addr2~0" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_addr2~0</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_addr2~1" instance="io[38]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_addr2~1" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_addr2~1</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_addr2~2" instance="io[39]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_addr2~2" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_addr2~2</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_addr2~3" instance="io[40]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_addr2~3" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_addr2~3</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_data1~1" instance="io[41]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_data1~1" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_data1~1</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_data1~2" instance="io[42]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_data1~2" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_data1~2</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_addr2~4" instance="io[43]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_addr2~4" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_addr2~4</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_data1~0" instance="io[44]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_data1~0" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_data1~0</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_addr1~1" instance="io[45]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_addr1~1" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_addr1~1</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_addr1~3" instance="io[46]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_addr1~3" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_addr1~3</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_we1" instance="io[47]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_we1" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_we1</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_we2" instance="io[48]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_we2" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_we2</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="clk" instance="io[49]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="clk" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">clk</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_addr1~2" instance="io[50]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_addr1~2" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_addr1~2</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_addr1~4" instance="io[51]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_addr1~4" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_addr1~4</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_data1~8" instance="io[52]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_data1~8" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_data1~8</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+	<block name="bram_data2~9" instance="io[53]" mode="inpad">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">inpad[0].inpad[0]-&gt;inpad</port>
+		</outputs>
+		<clocks>
+			<port name="clock">open</port>
+		</clocks>
+		<block name="bram_data2~9" instance="inpad[0]">
+			<attributes />
+			<parameters />
+			<inputs />
+			<outputs>
+				<port name="inpad">bram_data2~9</port>
+			</outputs>
+			<clocks />
+		</block>
+	</block>
+</block>

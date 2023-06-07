@@ -20,7 +20,7 @@ puts "Using parmys as partial mapper"
 
 
 
-parmys_arch -a /home/endri-admin/Desktop/VTR_forks/vtr-verilog-to-routing_may2023/vtr_work/vtr_out_dir/my_multiplier_dir/k6FracN10LB_mem20K_complexDSP_customSB_22nm.xml
+parmys_arch -a /home/endri-admin/Desktop/VTR_forks/vtr-verilog-to-routing_may2023/vtr_work/vtr_out_dir/my_multiplier_dir/k6FracN10LB_mem20K_complexDSP_nonDedLinks_customSB_22nm.xml
 
 
 
@@ -126,7 +126,7 @@ opt -full
 
 
 
-parmys -a /home/endri-admin/Desktop/VTR_forks/vtr-verilog-to-routing_may2023/vtr_work/vtr_out_dir/my_multiplier_dir/k6FracN10LB_mem20K_complexDSP_customSB_22nm.xml -nopass -c odin_config.xml
+parmys -a /home/endri-admin/Desktop/VTR_forks/vtr-verilog-to-routing_may2023/vtr_work/vtr_out_dir/my_multiplier_dir/k6FracN10LB_mem20K_complexDSP_nonDedLinks_customSB_22nm.xml -nopass -c odin_config.xml
 
 
 
